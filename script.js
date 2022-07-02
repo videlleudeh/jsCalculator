@@ -6,17 +6,24 @@ let opr = prompt("Select '+', '-', '*' or '/': ");
 let y = parseFloat(prompt("Enter another number: "));
 
 
- 
-if (opr === '+')
-    {result = x + y;}
-else if (opr === '-')
-    {result = x - y;}
-else if (opr === '*')
-    {result = x * y;}
-else if (opr === '/')
-    {result = x / y;}
+if (isNaN(x)) 
+    alert('Invalid input. Enter a valid number.');
+else if (isNaN(y))
+    alert('Invalid input. Enter a valid number.');
 else {
-    alert("Invalid operator. Please refresh the page and try again!")
+    if (opr === '+')
+        {result = x + y;}
+    else if (opr === '-')
+        {result = x - y;}
+    else if (opr === '*')
+        {result = x * y;}
+    else if (opr === '/')
+        {result = x / y;}
+    else {
+        alert("Invalid operator. Please refresh the page and try again!")
+    } 
 }
+
+
 
 window.confirm("The answer is " + result + '.')
